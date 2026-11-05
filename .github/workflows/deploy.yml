@@ -27,6 +27,7 @@ jobs:
           mkdir -p _site
           cp index.html _site/
           [ -d assets ] && cp -r assets _site/
+          [ -d images ] && cp -r images _site/
           [ -d projects ] && cp -r projects _site/
           for app in apps/*/; do
             [ -f "$app/package.json" ] || continue
