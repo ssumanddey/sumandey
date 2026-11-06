@@ -6,54 +6,84 @@
 <title>Suman Dey | AI Security & Cloud Infrastructure Architect</title>
 <meta name="description" content="Suman Dey – AI Security, MLOps and AWS/Kubernetes infrastructure Architect with 25+ years of experience. Bengaluru, India.">
 <style>
-:root{--bg:#f7f8fb;--card:#fff;--text:#16202e;--muted:#5b6778;--accent:#0b6bcb;--line:#e2e6ee;--chip:#eaf2fc}
-@media (prefers-color-scheme:dark){:root{--bg:#0d1320;--card:#151d2e;--text:#e8edf5;--muted:#9aa6b8;--accent:#5aa8ff;--line:#253049;--chip:#1b2a45}}
+:root{--navy:#0b2a6f;--blue:#2f6fd0;--sky:#cfe7f8;--sky2:#eaf5fc;--white:#fff;--text:#1b2740;--muted:#58677f;--line:#d5e3f1;--serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-nav{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--line);z-index:5;display:flex;gap:18px;flex-wrap:wrap;padding:12px 5%;align-items:center}
-nav b{margin-right:auto}nav a{color:var(--text);font-size:.92rem}
-.wrap{max-width:1000px;margin:0 auto;padding:0 5%}
-.hero{display:flex;gap:32px;align-items:center;padding:56px 0 32px;flex-wrap:wrap}
-img.avatar{object-fit:cover;border:3px solid var(--accent)}
-.avatar{width:140px;height:140px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:700;flex:none}
-.hero h1{margin:.1em 0;font-size:2.2rem}.hero h3{margin:0;color:var(--accent);font-weight:600}
-.hero p{color:var(--muted);max-width:620px}
-.btn{display:inline-block;padding:9px 18px;border-radius:8px;background:var(--accent);color:#fff;margin:4px 6px 0 0;font-weight:600}
-.btn.o{background:transparent;border:1px solid var(--accent);color:var(--accent)}
-section{padding:34px 0}h2{border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:4px;margin:0 0 18px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
-.card h4{margin:0 0 6px}.card ul{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:.93rem}
-.chips span{display:inline-block;background:var(--chip);color:var(--accent);padding:3px 10px;border-radius:99px;margin:3px 3px 3px 0;font-size:.82rem}
-.tl{border-left:2px solid var(--line);padding-left:18px}.tl div{margin-bottom:18px;position:relative}
-.tl div:before{content:"";position:absolute;left:-25px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+body{margin:0;font-family:var(--sans);color:var(--text);background:var(--white);line-height:1.65}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+/* top bar */
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 4%;background:var(--navy);box-shadow:0 2px 12px rgba(0,0,0,.25)}
+nav .logo{font-family:var(--serif);font-weight:700;font-size:1.25rem;color:#fff;letter-spacing:.12em}
+nav .links{display:flex;gap:22px;margin-left:auto;align-items:center}
+nav .links a{color:#fff;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:5px 8px;border:1px solid transparent;border-radius:6px;white-space:nowrap}
+nav .links a:hover,nav .links a:focus{border-color:#fff;text-decoration:none}
+nav .cta{border-color:#fff;color:#fff}nav .cta:hover{background:#fff;color:var(--navy)}
+.cta{display:inline-block;border:1.5px solid var(--navy);color:var(--navy);padding:8px 20px;border-radius:99px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;background:transparent}
+.cta:hover{background:var(--navy);color:#fff;text-decoration:none}
+.cta.f{background:var(--navy);color:#fff}.cta.f:hover{background:var(--blue);border-color:var(--blue)}
+/* hero */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px 6% 70px;position:relative;overflow:hidden;
+background:radial-gradient(ellipse 380px 130px at 12% 24%,#fff 0,rgba(255,255,255,0) 70%),radial-gradient(ellipse 460px 150px at 88% 36%,#fff 0,rgba(255,255,255,0) 70%),radial-gradient(ellipse 420px 120px at 20% 86%,#fff 0,rgba(255,255,255,0) 70%),radial-gradient(ellipse 380px 120px at 85% 90%,#fff 0,rgba(255,255,255,0) 70%),linear-gradient(180deg,#9fd0f2 0,var(--sky) 55%,var(--sky2) 100%)}
+.hero img{width:170px;height:170px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 10px 30px rgba(11,42,111,.25)}
+.hero small{margin-top:22px;letter-spacing:.3em;text-transform:uppercase;color:var(--navy);font-size:.76rem}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,7vw,4.6rem);letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin:.15em 0}
+.hero h3{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--navy);font-size:clamp(1rem,2.4vw,1.4rem);margin:0 0 8px;max-width:760px}
+.hero p{color:var(--text);max-width:640px;margin:6px 0 20px}
+.hero .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.arrow{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:var(--navy);font-size:1.8rem;animation:b 1.8s infinite}
+@keyframes b{50%{transform:translate(-50%,8px)}}
+/* sections */
+section{padding:84px 6%}section.alt{background:var(--sky2)}
+.in{max-width:1040px;margin:0 auto}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,4vw,2.3rem);letter-spacing:.16em;text-transform:uppercase;color:var(--navy);text-align:center;margin:0 0 8px}
+h2+.rule{width:56px;height:2px;background:var(--blue);margin:0 auto 38px}
+.quote{font-family:var(--serif);font-size:clamp(1.15rem,2.6vw,1.65rem);line-height:1.7;color:var(--navy);text-align:center;max-width:860px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 6px 20px rgba(11,42,111,.06)}
+.card h4{font-family:var(--serif);font-weight:700;color:var(--navy);margin:0 0 6px;font-size:1.08rem}
+.card small{color:var(--blue);letter-spacing:.06em}
+.card ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:.93rem}
+.card.top{border-top:5px solid var(--navy)}
+.chips{text-align:center}
+.chips span{display:inline-block;border:1px solid var(--line);background:#fff;color:var(--navy);padding:6px 16px;border-radius:99px;margin:5px 4px;font-size:.84rem}
+.tl{max-width:760px;margin:0 auto;border-left:2px solid var(--blue);padding-left:26px}
+.tl div{margin-bottom:22px;position:relative}
+.tl div:before{content:"";position:absolute;left:-34px;top:8px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--navy)}
 .tl small{color:var(--muted)}
-footer{text-align:center;color:var(--muted);padding:30px 0;border-top:1px solid var(--line);margin-top:30px;font-size:.88rem}
+.center{text-align:center;margin-top:22px}
+/* footer */
+footer{background:var(--navy);color:#dbe7fb;padding:60px 6% 30px;text-align:center}
+footer .logo{font-family:var(--serif);font-size:1.8rem;letter-spacing:.2em;color:#fff}
+footer a{color:#fff}
+footer .links{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;margin:20px 0}
+footer .links a{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase}
+footer p{margin:6px 0}footer small{display:block;margin-top:26px;opacity:.7}
+@media(max-width:820px){nav{flex-wrap:wrap;padding:10px 4%}nav .links{order:3;width:100%;margin:6px 0 0;overflow-x:auto;gap:10px}section{padding:64px 6%}.hero{padding-top:130px}}
 </style>
 </head>
 <body>
-<nav><b>Suman Dey</b><a href="#about">About</a><a href="#aisec">AI Security</a><a href="#infra">Infrastructure</a><a href="#coding">Programming</a><a href="#data">Data</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#certs">Certifications</a><a href="#contact">Contact</a></nav>
+<nav><span class="logo">SD</span>
+<div class="links"><a href="#about">About</a><a href="#aisec">AI Security</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certs">Certifications</a></div>
+<a class="cta" href="#contact">Contact</a></nav>
 
-<div class="wrap">
-<header class="hero">
-  <img class="avatar" src="images/sd-cl-2026.png" alt="Suman Dey" width="140" height="140">
-  <div>
-    <small>Hello, I am</small>
-    <h1>Suman Dey</h1>
-    <h3>AI Infrastructure Architect | AI Security | AWS Cloud Architect | MLOps</h3>
-    <p>25+ years building secure, scalable systems. I secure AI/GenAI workloads and run the cloud-native infrastructure (AWS, Kubernetes, OpenShift) they depend on.</p>
-    <a class="btn" href="https://www.linkedin.com/in/suman-dey-190b42173/">LinkedIn</a>
-    <a class="btn o" href="https://www.credly.com/users/suman-dey/badges">Credly Badges</a>
-    <a class="btn o" href="https://main.d2gh7jpu4pbxsd.amplifyapp.com/">Current Website</a>
-    <a class="btn o" href="mailto:ssumanddey@gmail.com">Email me</a>
+<header class="hero" id="start">
+  <img src="images/sd-cl-2026.png" alt="Suman Dey" width="170" height="170">
+  <small>Hello, I am</small>
+  <h1>Suman Dey</h1>
+  <h3>AI Infrastructure Architect | AI Security | AWS Cloud Architect | MLOps</h3>
+  <p>25+ years building secure, scalable systems. I secure AI/GenAI workloads and run the cloud-native infrastructure (AWS, Kubernetes, OpenShift) they depend on.</p>
+  <div class="row">
+    <a class="cta f" href="https://www.linkedin.com/in/suman-dey-190b42173/">LinkedIn</a>
+    <a class="cta" href="https://www.credly.com/users/suman-dey/badges">Credly Badges</a>
+    <a class="cta" href="https://main.d2gh7jpu4pbxsd.amplifyapp.com/">Current Website</a>
+    <a class="cta" href="mailto:ssumanddey@gmail.com">Email me</a>
   </div>
+  <a class="arrow" href="#about" aria-label="Scroll down">&#8595;</a>
 </header>
 
-<section id="about"><h2>About Me</h2>
-<p>I started as a Java/Spring developer in 2001 and grew into DevOps, cloud architecture and MLOps at IBM, working for clients such as Westpac(AUS), AUDI(UK), Barclays(UK), STC(Riyadh), Syniverse(USA), Toyota(USA), Vodafone(UK),  and CITI Bank(USA). I have led teams of 40+ engineers in banking, finance and telecom, and today work as an <b>AI Infrastructure Architect</b> and <b>AWS Cloud Architect</b> at IBM, focused on making AI systems <b>secure, compliant and production-ready</b>.</p></section>
+<section id="about"><div class="in"><h2>About Me</h2><div class="rule"></div>
+<p class="quote">I started as a Java/Spring developer in 2001 and grew into DevOps, cloud architecture and MLOps at IBM, working for clients such as Westpac (AUS), Audi (UK), Barclays (UK), STC (Riyadh), Syniverse (USA), Toyota (USA), Vodafone (UK) and Citi Bank (USA). I have led teams of 40+ engineers in banking, finance and telecom, and today work as an <b>AI Infrastructure Architect</b> and <b>AWS Cloud Architect</b> at IBM, focused on making AI systems <b>secure, compliant and production-ready</b>.</p></div></section>
 
-<section id="aisec"><h2>AI Security Skills</h2>
+<section id="aisec" class="alt"><div class="in"><h2>AI Security Skills</h2><div class="rule"></div>
 <div class="grid">
 <div class="card"><h4>LLM &amp; GenAI Application Security</h4><ul><li>OWASP Top 10 for LLM Applications</li><li>Prompt injection (direct &amp; indirect), jailbreaks, system-prompt leakage</li><li>Insecure output handling, excessive agency, unbounded consumption</li></ul></div>
 <div class="card"><h4>Secure RAG &amp; Data Protection</h4><ul><li>Document-level authorization and tenant isolation</li><li>Vector DB security and poisoned-content defense</li><li>Data minimization, redaction, KMS encryption, secrets management</li></ul></div>
@@ -62,35 +92,31 @@ footer{text-align:center;color:var(--muted);padding:30px 0;border-top:1px solid 
 <div class="card"><h4>AI Red Teaming &amp; DevSecOps</h4><ul><li>Prompt-injection regression suites in CI/CD</li><li>SAST, SCA, DAST, container and IaC scanning</li><li>Threat modeling, risk registers, security metrics</li></ul></div>
 <div class="card"><h4>Governance &amp; Compliance</h4><ul><li>NIST AI RMF, MITRE ATLAS, Google SAIF</li><li>GDPR, HIPAA, PCI DSS audits</li><li>AI risk classification and EU AI Act awareness</li></ul></div>
 <div class="card"><h4>AI Technologies</h4><ul><li>WatsonX, Granite, FastAPI, PyTorch, TorchServe</li><li>Low-Level Design (LLD) for AI-driven systems</li></ul></div>
-</div></section>
+</div></div></section>
 
-<section id="aibasics"><h2>Core AI Engineering Skills</h2>
-<div class="chips">
-<span>Machine Learning Fundamentals</span><span>Deep Learning</span><span>LLMs &amp; Prompt Engineering</span><span>Generative AI</span><span>RAG</span><span>Embeddings &amp; Vector Search</span><span>Model Fine-tuning</span><span>Model Evaluation</span><span>MLOps &amp; Model Monitoring</span><span>Data Pipelines &amp; Feature Engineering</span><span>AI Agents &amp; Tool Use</span><span>Responsible AI &amp; AI Governance</span>
-</div></section>
+<section id="aibasics"><div class="in"><h2>Core AI Engineering Skills</h2><div class="rule"></div>
+<div class="chips"><span>Machine Learning Fundamentals</span><span>Deep Learning</span><span>LLMs &amp; Prompt Engineering</span><span>Generative AI</span><span>RAG</span><span>Embeddings &amp; Vector Search</span><span>Model Fine-tuning</span><span>Model Evaluation</span><span>MLOps &amp; Model Monitoring</span><span>Data Pipelines &amp; Feature Engineering</span><span>AI Agents &amp; Tool Use</span><span>Responsible AI &amp; AI Governance</span></div></div></section>
 
-<section id="infra"><h2>Infrastructure &amp; Cloud Skills</h2>
-<div class="chips">
-<span>AWS</span><span>EKS</span><span>Fargate</span><span>Lambda</span><span>SageMaker</span><span>Bedrock</span><span>Kubernetes</span><span>Red Hat OpenShift</span><span>Helm</span><span>Docker</span><span>Terraform</span><span>CloudFormation</span><span>Ansible</span><span>Jenkins</span><span>GitHub Actions</span><span>CodePipeline</span><span>GitOps</span><span>IAM / RBAC</span><span>AWS WAF</span><span>KMS</span><span>Secrets Manager</span><span>CloudHSM</span><span>VPC</span><span>Route53</span><span>Kafka</span><span>Step Functions</span><span>Prometheus</span><span>Grafana</span><span>CloudWatch</span><span>ELK / Splunk</span><span>PostgreSQL</span><span>Python</span><span>Java / Spring Boot</span><span>TypeScript / Node.js</span><span>PyTorch / TorchServe</span><span>MLflow / Kubeflow</span>
-</div></section>
+<section id="infra" class="alt"><div class="in"><h2>Infrastructure &amp; Cloud Skills</h2><div class="rule"></div>
+<div class="chips"><span>AWS</span><span>EKS</span><span>Fargate</span><span>Lambda</span><span>SageMaker</span><span>Bedrock</span><span>Kubernetes</span><span>Red Hat OpenShift</span><span>Helm</span><span>Docker</span><span>Terraform</span><span>CloudFormation</span><span>Ansible</span><span>Jenkins</span><span>GitHub Actions</span><span>CodePipeline</span><span>GitOps</span><span>IAM / RBAC</span><span>AWS WAF</span><span>KMS</span><span>Secrets Manager</span><span>CloudHSM</span><span>VPC</span><span>Route53</span><span>Kafka</span><span>Step Functions</span><span>Prometheus</span><span>Grafana</span><span>CloudWatch</span><span>ELK / Splunk</span><span>MLflow / Kubeflow</span></div></div></section>
 
-<section id="coding"><h2>Programming Skills</h2>
-<div class="chips"><span>Python</span><span>Java</span><span>Spring Boot</span><span>NodeJS</span><span>ReactJS</span><span>TypeScript</span></div></section>
+<section id="coding"><div class="in"><h2>Programming Skills</h2><div class="rule"></div>
+<div class="chips"><span>Python</span><span>Java</span><span>Spring Boot</span><span>NodeJS</span><span>ReactJS</span><span>TypeScript</span></div></div></section>
 
-<section id="data"><h2>Databases &amp; Data Warehouse</h2>
-<div class="chips"><span>Oracle</span><span>MongoDB</span><span>PostgreSQL</span><span>Snowflake</span><span>Vector Databases (pgvector, FAISS, Chroma)</span><span>Amazon DynamoDB</span><span>Data Lake</span><span>Feature Store</span></div></section>
+<section id="data" class="alt"><div class="in"><h2>Databases &amp; Data Warehouse</h2><div class="rule"></div>
+<div class="chips"><span>Oracle</span><span>MongoDB</span><span>PostgreSQL</span><span>Snowflake</span><span>Vector Databases (pgvector, FAISS, Chroma)</span><span>Amazon DynamoDB</span><span>Data Lake</span><span>Feature Store</span></div></div></section>
 
-<section id="projects"><h2>Featured Work</h2>
+<section id="projects"><div class="in"><h2>Featured Work</h2><div class="rule"></div>
 <div class="grid">
-<div class="card"><h4>IBM AIOps Platform – AI Infrastructure Architect</h4><small>Current project | Aug 2025 – Present</small><ul><li>Security vulnerability solution design, analysis and remediation for an enterprise AIOps platform</li><li>Modules: Knowledge Management, ChatBot, Query (Talk-to-Data), Voice assistant and NOC AI</li><li>Secure AI infrastructure and Data &amp; AI core for IT operations</li></ul></div>
-<div class="card"><h4>STC (Riyadh) – AWS MLOps &amp; AI Security</h4><small>Telecom | Feb 2025 – July 2025</small><ul><li>End-to-end MLOps on SageMaker and Kubernetes</li><li>Adversarial attack detection against data poisoning</li><li>IAM, KMS and Secrets Manager for secure AI data processing</li><li>Audits for GDPR, HIPAA and PCI DSS</li></ul></div>
-<div class="card"><h4>Syniverse (USA) – AWS Solution Architect</h4><small>Telecom | Jul 2024 – Feb 2025</small><ul><li>Multi-region PostgreSQL RDS failover and data residency</li><li>VPC, WAF, TLS and KMS to meet PCI DSS</li><li>Penetration tests against SQL injection and CSRF</li></ul></div>
-<div class="card"><h4>Audi (UK) – OpenShift &amp; AWS DevOps Lead</h4><small>Automotive | Apr 2019 – Apr 2024</small><ul><li>Red Hat OCP clusters with RBAC and security contexts</li><li>Terraform, Jenkins and OpenShift GitOps pipelines</li><li>Kafka and Lambda event-driven integrations</li></ul></div>
-<div class="card"><h4>Toyota (USA) – Full Stack &amp; Kafka</h4><small>Automotive | Apr 2024 – Jul 2024</small><ul><li>Smart Fulfillment Engine recommendation APIs</li><li>Kafka producers/consumers on AWS</li></ul></div>
-<div class="card"><h4>Westpac NPP (AUS) – Java Solution Architect</h4><small>Banking | 2016 – 2017</small><ul><li>Real-time payments microservices</li><li>OAuth2, JWT and RBAC secured APIs</li></ul></div>
-</div></section>
+<div class="card top"><h4>IBM AIOps Platform – AI Infrastructure Architect</h4><small>Current project | Aug 2025 – Present</small><ul><li>Security vulnerability solution design, analysis and remediation for an enterprise AIOps platform</li><li>Modules: Knowledge Management, ChatBot, Query (Talk-to-Data), Voice assistant and NOC AI</li><li>Secure AI infrastructure and Data &amp; AI core for IT operations</li></ul></div>
+<div class="card top"><h4>STC (Riyadh) – AWS MLOps &amp; AI Security</h4><small>Telecom | Feb 2025 – Jul 2025</small><ul><li>End-to-end MLOps on SageMaker and Kubernetes</li><li>Adversarial attack detection against data poisoning</li><li>IAM, KMS and Secrets Manager for secure AI data processing</li><li>Audits for GDPR, HIPAA and PCI DSS</li></ul></div>
+<div class="card top"><h4>Syniverse (USA) – AWS Solution Architect</h4><small>Telecom | Jul 2024 – Feb 2025</small><ul><li>Multi-region PostgreSQL RDS failover and data residency</li><li>VPC, WAF, TLS and KMS to meet PCI DSS</li><li>Penetration tests against SQL injection and CSRF</li></ul></div>
+<div class="card top"><h4>Audi (UK) – OpenShift &amp; AWS DevOps Lead</h4><small>Automotive | Apr 2019 – Apr 2024</small><ul><li>Red Hat OCP clusters with RBAC and security contexts</li><li>Terraform, Jenkins and OpenShift GitOps pipelines</li><li>Kafka and Lambda event-driven integrations</li></ul></div>
+<div class="card top"><h4>Toyota (USA) – Full Stack &amp; Kafka</h4><small>Automotive | Apr 2024 – Jul 2024</small><ul><li>Smart Fulfillment Engine recommendation APIs</li><li>Kafka producers/consumers on AWS</li></ul></div>
+<div class="card top"><h4>Westpac NPP (AUS) – Java Solution Architect</h4><small>Banking | 2016 – 2017</small><ul><li>Real-time payments microservices</li><li>OAuth2, JWT and RBAC secured APIs</li></ul></div>
+</div></div></section>
 
-<section id="experience"><h2>Career Timeline</h2>
+<section id="experience" class="alt"><div class="in"><h2>Career Timeline</h2><div class="rule"></div>
 <div class="tl">
 <div><b>AWS Cloud Architect</b> – IBM India, Bangalore<br><small>Jan 2026 – Present</small></div>
 <div><b>AWS FullStack Engineer</b> – IBM India, Bangalore<br><small>Oct 2022 – Dec 2025</small></div>
@@ -100,25 +126,28 @@ footer{text-align:center;color:var(--muted);padding:30px 0;border-top:1px solid 
 <div><b>Technical Lead</b> – Ebusinessware (Xorient), Gurgaon<br><small>Dec 2006 – Oct 2010</small></div>
 <div><b>Senior Software Engineer</b> – Saksoft Ltd, Chennai<br><small>Mar 2004 – Dec 2006</small></div>
 <div><b>Software Engineer</b> – NIIT Ltd, India<br><small>Feb 2003 – Feb 2004</small></div>
-</div></section>
+</div></div></section>
 
-<section id="education"><h2>Education</h2>
+<section id="education"><div class="in"><h2>Education</h2><div class="rule"></div>
 <div class="tl">
-<div><b>MBA in Information Technology</b>
-</div></section>
+<div><b>MBA in Information Technology</b> – Shobhit University, India<br><small>2012 – 2015</small></div>
+<div><b>BCA, Bachelor of Computer Applications</b> – Institute of Management &amp; Technical Studies<br><small>2008 – 2011</small></div>
+<div><b>Diploma in Business Programming</b> – DOEACC, India<br><small>2003 – 2005</small></div>
+<div><b>Diploma in E-Commerce, Java, Web Design</b> – SSI Ltd<br><small>2000 – 2001</small></div>
+</div></div></section>
 
-<section id="certs"><h2>Certifications</h2>
-<div class="chips">
-<span>AWS Solutions Architect Professional(Udemy)</span><span>AWS Developer Associate</span><span>AWS Cloud Practitioner</span><span>AWS Well-Architected Proficient</span><span>AWS Serverless</span><span>AWS Networking Core</span><span>AWS Machine Learning (DeepRacer)</span><span>Amazon Braket</span><span>IBM Python for Data Science</span><span>IBM Deep Learning Essentials</span><span>watsonx Code Assistant</span><span>watsonx Orchestrate</span><span>Terraform Sales Foundation (IBM)</span><span>Generative AI for Code with watsonx Code Assistant</span><span>Application Modernization with watsonx Code</span><span>IBM Method Essentials</span><span>IBM Delivery Central Platform Foundations</span><span>AWS Migration Foundations</span><span>AWS File Storage</span><span>AWS Educate Networking</span><span>AWS Educate Machine Learning</span>
-</div>
-<p><a href="https://www.credly.com/users/suman-dey/badges">View verified badges on Credly →</a></p></section>
+<section id="certs" class="alt"><div class="in"><h2>Certifications</h2><div class="rule"></div>
+<div class="chips"><span>AWS Solutions Architect Professional (Udemy)</span><span>AWS Developer Associate</span><span>AWS Cloud Practitioner</span><span>AWS Well-Architected Proficient</span><span>AWS Serverless</span><span>AWS Networking Core</span><span>AWS Machine Learning (DeepRacer)</span><span>Amazon Braket</span><span>IBM Python for Data Science</span><span>IBM Deep Learning Essentials</span><span>watsonx Code Assistant</span><span>watsonx Orchestrate</span><span>Terraform Sales Foundation (IBM)</span><span>Generative AI for Code with watsonx Code Assistant</span><span>Application Modernization with watsonx Code</span><span>IBM Method Essentials</span><span>IBM Delivery Central Platform Foundations</span><span>AWS Migration Foundations</span><span>AWS File Storage</span><span>AWS Educate Networking</span><span>AWS Educate Machine Learning</span></div>
+<p class="center"><a class="cta" href="https://www.credly.com/users/suman-dey/badges">View verified badges on Credly</a></p></div></section>
 
-<section id="contact"><h2>Contact</h2>
-<p>Bengaluru, India<br>
-Email: <a href="mailto:ssumanddey@gmail.com">ssumanddey@gmail.com</a><br>
-LinkedIn: <a href="https://www.linkedin.com/in/suman-dey-190b42173/">linkedin.com/in/suman-dey-190b42173</a><br>
-Website: <a href="https://main.d2gh7jpu4pbxsd.amplifyapp.com/">main.d2gh7jpu4pbxsd.amplifyapp.com</a><br>
-</div>
-<footer>© 2026 Suman Dey.</footer>
+<footer id="contact">
+<div class="logo">SUMAN DEY</div>
+<div class="links"><a href="#about">About</a><a href="#aisec">AI Security</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certs">Certifications</a></div>
+<p>Bengaluru, India</p>
+<p>Email: <a href="mailto:ssumanddey@gmail.com">ssumanddey@gmail.com</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/suman-dey-190b42173/">linkedin.com/in/suman-dey-190b42173</a></p>
+<p>Website: <a href="https://main.d2gh7jpu4pbxsd.amplifyapp.com/">main.d2gh7jpu4pbxsd.amplifyapp.com</a></p>
+<small>© 2026 Suman Dey.</small>
+</footer>
 </body>
 </html>
